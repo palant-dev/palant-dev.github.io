@@ -1,0 +1,88 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+
+
+body { color: #333; }
+
+a:hover {
+ 	color: #ffabcf
+	}
+
+.card-intro h1 { font-weight: 400; letter-spacing: 0; }
+
+h1, .entry-title { font-family: 'Abril Fatface', sans-serif; }
+
+/* Heading 1 Font Weight */
+h1, .entry-title { font-weight: 400; }
+
+/* Heading 1 Font Size */
+@media screen and (min-width: 768px) { h1 { font-size: 54px; } }
+
+
+/* Intro Text Font Size */
+@media only screen and (min-width: 992px) { .card-intro p { font-size: 22px; } }
+
+
+
+
+/* PRIMARY COLOR */
+.pagination a:hover,
+a.more-link:hover,
+.event:nth-of-type(2):after,
+.portfolio-nav a:hover,
+.skill-unit .bar .progress,
+#nprogress .bar {
+ 	background-color: #ffabcf;
+	}
+.bypostauthor > article,
+.event h3,
+input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]):focus, 
+textarea:focus, 
+input:focus, 
+select:focus,
+.tabs .tab-titles li a.active {
+	border-color: #ffabcf
+	}
+.event h3,
+.entry-title a:hover {
+	color: #ffabcf
+	}
+#nprogress .spinner-icon {
+  	border-top-color: #ffabcf; border-left-color: #ffabcf;
+	}
+
+
+
+/* Primary Button Color */
+input[type=submit], 
+input[type=button], 
+button, 
+.button {
+	color: #ffabcf; border-color: #ffabcf;
+	}
+input[type=submit]:hover, 
+input[type=button]:hover,
+button:not(.button):hover,
+.button:after {
+	background: #ffabcf;
+	}
+
+
+/* Secondary Button Color */
+.button.secondary {
+	color: #34b0db; border-color: #34b0db;
+	}
+.button.secondary:after {
+	background: #34b0db;
+	}
+
+/* Section Title Underline Color */
+.section-title h2 i, .cat-links a, .filters li a:hover, .filters .current > a { box-shadow: inset 0 -6px 0px #feeac5; }
+
+/* Menu Selected Item Color */
+.card-nav li.current_page_item a { color: #ffebc5; }
+
+/* Card Title Background Color */
+.card-info h2 { background: #ff7eb6; }

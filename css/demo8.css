@@ -1,0 +1,113 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+body {
+ 	color: #111; 
+ }
+h1, .entry-title {
+	font-family: 'Anton', sans-serif;
+	}
+
+/* Heading 1 Font Weight */
+h1,
+.entry-title {
+	font-weight: 400;
+	}
+
+/* Heading 1 Font Size */
+@media screen and (min-width: 768px) { h1 { font-size: 64px; } }
+
+
+/* Intro Text Font Size */
+@media only screen and (min-width: 992px) { .card-intro p { font-size: 22px; } }
+
+
+/* Intro Title Font Weight */
+.card-intro h1, .site-title { font-weight: 400; }
+
+/* Intro Title Letter Spacing */
+@media only screen and (min-width: 992px) { .card-intro h1 { letter-spacing: 0px; } }
+	
+	
+
+/* Grid Title Font Size */
+@media screen and (min-width: 768px) { .media-grid h3 { font-size: 14px; } }
+
+/* Grid Title Text Transform */
+.media-grid h3 { text-transform: uppercase; }
+	
+/* Grid Title Letter Spacing */
+.media-grid h3 { letter-spacing: 2px; }	
+
+
+
+/* Blog List Title Font Size */
+@media screen and (min-width: 768px) { .blog-regular .entry-title { font-size: 46px; } }
+
+
+
+
+/* Card Image Mask Color */
+.cover:after, .card-3d-right-side:after, .card-3d-bottom-side:after, .header:before { background: #375d84; }
+
+
+/* PRIMARY COLOR */
+.pagination a:hover,
+a.more-link:hover,
+.event:nth-of-type(2):after,
+.portfolio-nav a:hover,
+.skill-unit .bar .progress,
+#nprogress .bar {
+ 	background-color: #e35774;
+	}
+.bypostauthor > article,
+.event h3,
+input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]):focus, 
+textarea:focus, 
+input:focus, 
+select:focus,
+.tabs .tab-titles li a.active {
+	border-color: #e35774
+	}
+.event h3,
+.entry-title a:hover {
+	color: #e35774
+	}
+#nprogress .spinner-icon {
+  	border-top-color: #e35774; border-left-color: #e35774;
+	}
+
+
+
+/* Primary Button Color */
+input[type=submit], 
+input[type=button], 
+button, 
+.button {
+	color: #111; border-color: #111;
+	}
+input[type=submit]:hover, 
+input[type=button]:hover,
+button:not(.button):hover,
+.button:after {
+	background: #111;
+	}
+
+
+/* Secondary Button Color */
+.button.secondary {
+	color: #111; border-color: #111;
+	}
+.button.secondary:after {
+	background: #111;
+	}
+
+/* Section Title Underline Color */
+.section-title h2 i, .cat-links a, .filters li a:hover, .filters .current > a { box-shadow: inset 0 -6px 0px #e5e7e8; }
+
+/* Menu Selected Item Color */
+.card-nav li.current_page_item a { color: #ffd561; }
+
+/* Card Title Background Color */
+.card-info h2 { background: #e35774; }

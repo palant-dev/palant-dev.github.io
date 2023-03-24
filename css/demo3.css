@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rufina:400,700');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+body {
+ 	color: #54514d; font-family: 'Karla', sans-serif;
+ 	}
+a:hover {
+	color: #bcb1a6;
+	}
+ 
+.card-intro h1 {
+	font-weight: 400; letter-spacing: 0;
+	}
+h1, .entry-title {
+	font-family: 'Rufina', serif; font-weight: 400;
+	}
+	
+
+/* Heading 1 Font Size */
+@media screen and (min-width: 768px) { h1 { font-size: 48px; } }
+
+
+	
+/* Grid Title Font Size */
+@media screen and (min-width: 768px) { .media-grid h3 { font-size: 14px; } }
+
+/* Grid Title Text Transform */
+.media-grid h3 { text-transform: uppercase; }
+	
+/* Grid Title Letter Spacing */
+.media-grid h3 { letter-spacing: 3px; }	
+	
+
+/* Card Image Mask Color */
+.cover:after, .card-3d-right-side:after, .card-3d-bottom-side:after, .header:before { background: #717154; }
+
+/* Card Title Background Color */
+.card-info h2 { background: #bcb1a6; }
+
+/* Intro Text Font Size */
+@media only screen and (min-width: 992px) { .card-intro p { font-size: 20px; } }
+
+/* PRIMARY COLOR */
+.pagination a:hover,
+a.more-link:hover,
+.event:nth-of-type(2):after,
+.portfolio-nav a:hover,
+.skill-unit .bar .progress,
+#nprogress .bar {
+ 	background-color: #bcb1a6;
+	}
+.bypostauthor > article,
+.event h3,
+input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]):focus, 
+textarea:focus, 
+input:focus, 
+select:focus,
+.tabs .tab-titles li a.active {
+	border-color: #bcb1a6
+	}
+.event h3,
+.entry-title a:hover {
+	color: #bcb1a6
+	}
+#nprogress .spinner-icon {
+  	border-top-color: #bcb1a6; border-left-color: #bcb1a6;
+	}
+
+/* Section Title Underline Color */
+.section-title h2 i, .cat-links a, .filters li a:hover, .filters .current > a { box-shadow: inset 0 -6px 0px #c6e3fc; }
+
+/* Menu Selected Item Color */
+.card-nav li.current_page_item a { color: #fff7b5; }
+
+
+
+/* Primary Button Color */
+input[type=submit], 
+input[type=button], 
+button, 
+.button {
+	color: #bcb1a6; border-color: #bcb1a6;
+	}
+input[type=submit]:hover, 
+input[type=button]:hover,
+button:not(.button):hover,
+.button:after {
+	background: #bcb1a6;
+	}
+
+
+/* Secondary Button Color */
+.button.secondary {
+	color: #bcb1a6; border-color: #bcb1a6;
+	}
+.button.secondary:after {
+	background: #bcb1a6;
+	}

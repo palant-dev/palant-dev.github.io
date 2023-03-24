@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+body {
+ 	color: #345;
+ 	}
+ 
+.card-intro h1 {
+	letter-spacing: 0; font-family: 'Montserrat', sans-serif;
+	}
+.card-intro h1 {
+	font-weight: 100;
+	}
+
+h1, .entry-title {
+	font-family: 'Montserrat', sans-serif;
+	}
+
+/* Heading 1 Font Weight */
+h1,
+.entry-title {
+	font-weight: 100;
+	}
+
+/* Intro Text Font Size */
+@media only screen and (min-width: 992px) { .card-intro p { font-size: 19px; } }
+
+/* Heading 1 Font Size */
+@media screen and (min-width: 768px) { h1 { font-size: 54px; } }
+	
+
+/* Grid Title Font Weight */
+.media-grid h3 { font-weight: 400; }	
+
+/* Grid Title Font Size */
+@media screen and (min-width: 768px) { .media-grid h3 { font-size: 17px; } }	
+	
+
+/* Card Image Mask Color */
+.cover:after, .card-3d-right-side:after, .card-3d-bottom-side:after, .header:before { background: #717154; }
+
+/* Card Title Background Color */
+.card-info h2 { background: #44a7ff; }
+
+/* PRIMARY COLOR */
+.pagination a:hover,
+a.more-link:hover,
+.event:nth-of-type(2):after,
+.portfolio-nav a:hover,
+.skill-unit .bar .progress,
+#nprogress .bar {
+ 	background-color: #44a7ff;
+	}
+.bypostauthor > article,
+.event h3,
+input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]):focus, 
+textarea:focus, 
+input:focus, 
+select:focus,
+.tabs .tab-titles li a.active {
+	border-color: #44a7ff
+	}
+.event h3,
+.entry-title a:hover {
+	color: #44a7ff
+	}
+#nprogress .spinner-icon {
+  	border-top-color: #44a7ff; border-left-color: #44a7ff;
+	}
+
+/* Section Title Underline Color */
+.section-title h2 i, .cat-links a, .filters li a:hover, .filters .current > a { box-shadow: inset 0 -6px 0px #f0f0df; }
+
+/* Menu Selected Item Color */
+.card-nav li.current_page_item a { color: #fff7b5; }
+
+
+
+/* Primary Button Color */
+input[type=submit], 
+input[type=button], 
+button, 
+.button {
+	color: #44a7ff; border-color: #44a7ff;
+	}
+input[type=submit]:hover, 
+input[type=button]:hover,
+button:not(.button):hover,
+.button:after {
+	background: #44a7ff;
+	}
+
+
+/* Secondary Button Color */
+.button.secondary {
+	color: #44a7ff; border-color: #44a7ff;
+	}
+.button.secondary:after {
+	background: #44a7ff;
+	}
+
+
+/* Buttons Font Weight */
+input[type=submit], input[type=button], button, .button { font-weight: 400; }
