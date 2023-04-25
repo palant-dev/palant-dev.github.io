@@ -1,9 +1,9 @@
 <?php
 
 	// site owner
-	$site_name = 'unRovr HTML5 Template';
-	$sender_domain = 'server@your-domain.com';
-	$to = 'jonhdoeeee@jonhdoe.com';
+	$site_name = 'PalAnt Personal Website';
+	$sender_domain = 'server@palant-dev.github.io';
+	$to = 'antonio.palomba2015@gmail.com';
 	
 	// contact form fields
 	$name = trim( $_POST['name'] );
