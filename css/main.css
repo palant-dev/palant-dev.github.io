@@ -878,10 +878,10 @@ textarea,
 	font-size: 42px; line-height: 1;
 	}
 html .process img { 
-	width: 100%; max-width: 80%; margin: 0 auto;
+	width: 40%; max-width: 80%; margin: 0 auto;
 	}
 .process h4 { 
-	margin: 16px 0 0; font-size: 11px; font-weight: 300; letter-spacing: .08em; text-transform: uppercase;
+	margin: 16px 0 0; font-size: 10px; font-weight: 300; letter-spacing: .08em; text-transform: uppercase; align-self: center;
 	}
 .row [class^="col-"]:nth-child(3n) .process:after,
 .elementor-column:nth-child(3n) .process:after { 
@@ -901,7 +901,7 @@ html .process img {
 .row > div:last-child .process img,
 .elementor-column:first-child .process img,
 .elementor-column:last-child .process img {
-	width: 120%; margin-left: -10%; max-width: none; margin-top: -26px;
+	width: 40%; margin-left: 0%; max-width: none; margin-top: 0px;
 	}
 .row > div:last-child .process,
 .elementor-column:last-child .process {
@@ -1037,6 +1037,9 @@ a.social-link:hover {
 .social-link.facebook:before {
 	content: '\e825'
 	}
+.social-link.medium:before {
+	content: '\f4f0'
+}
 .social-link.twitter:before {
 	content: '\e826'
 	}

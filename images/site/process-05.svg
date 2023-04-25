@@ -1,14 +1,1 @@
-<svg width="457" height="78" xmlns="http://www.w3.org/2000/svg">
- <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
- <g>
-  <title>background</title>
-  <rect fill="#fff" id="canvas_background" height="80" width="459" y="-1" x="-1"/>
-  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
-  </g>
- </g>
- <g>
-  <title>Layer 1</title>
-  <text stroke="#000" transform="matrix(2.347636734049186,0,0,2.347636734049186,-187.00693830148313,-235.87733598767022) " font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_2" y="125.335929" x="98.136632" stroke-width="0" fill="#000000">REPLACE ME</text>
- </g>
-</svg>
+<?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="Layer 18" id="Layer_18"><path d="M27.11,16,25.74,13.6a1,1,0,0,0-1.73,0L22.63,16a1,1,0,0,0,.87,1.5h.35a7.94,7.94,0,1,1-1-5.68,1,1,0,0,0,1.7-1,10,10,0,1,0-10.82,15A10.17,10.17,0,0,0,16,26a9.88,9.88,0,0,0,5.2-1.48,10,10,0,0,0,4.62-7h.38a1,1,0,0,0,.87-1.5Z"/></g></svg>

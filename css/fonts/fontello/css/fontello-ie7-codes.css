@@ -141,3 +141,4 @@
 .pw-icon-snapchat { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2ac;&nbsp;'); }
 .pw-icon-imdb { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf2d8;&nbsp;'); }
 .pw-icon-newspaper { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf4f0;&nbsp;'); }
+.pw-icon-medium { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf23a;&nbsp;'); }

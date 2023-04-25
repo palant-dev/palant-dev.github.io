@@ -6,6 +6,14 @@
   "units_per_em": 1000,
   "ascent": 850,
   "glyphs": [
+
+   {
+     "uid": "bf09b1c6561dc0ced707476e2cd83d29",
+     "css": "medium",
+     "code": 62010,
+     "src": "fontawesome"
+   },
+
     {
       "uid": "5408be43f7c42bccee419c6be53fdef5",
       "css": "doc-text",
