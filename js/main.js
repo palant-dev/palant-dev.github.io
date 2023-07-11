@@ -1,11 +1,3 @@
-/*
-	Name: unRovr
-	Description: Responsive HTML5 vCard Template
-	Version: 1.0
-	Author: pixelwars
-*/
-
-
 (function ($) {
 	"use strict";
 
