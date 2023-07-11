@@ -419,7 +419,7 @@ textarea,
 .header-title-link + .site-title { margin: 30px 0; font-size: 64px;
 	}
 .site-description {
-	font-size: 13px; text-transform: uppercase; letter-spacing: 4px; margin: 3em 0; color: #fff; opacity: .6;
+	font-size: 13px; text-transform: uppercase; letter-spacing: 4px; margin: 0 0; color: #fff; opacity: 1;
 	}
 .header-wrap > img {
 	display: none;
