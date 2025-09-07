@@ -6,7 +6,8 @@ const structuredData = {
   "url": "https://palant-dev.github.io/",
   "sameAs": [
     "https://www.linkedin.com/in/palant/",
-    "https://github.com/palant-dev"
+    "https://github.com/palant-dev",
+    "https://www.instagram.com/_palant_/"
   ],
   "jobTitle": "Program Manager",
   "worksFor": {
