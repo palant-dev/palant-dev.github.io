@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js classic-page-layout " data-audio-wind="audio/wind.wav" data-audio-wind-reverse="audio/wind-reverse.wav" data-audio-tick="audio/tick.mp3">
+<head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A practical guide to AI-assisted Swift development: how to work with AI coding agents efficiently, connect them to Xcode, and avoid the most common mistakes.">
+        <meta name="keywords" content="Swift, AI, Claude, Xcode, iOS development, AI coding agent, MCP, Claude Code, program management">
+        <meta name="author" content="Antonio Palomba">
+        <meta name="theme-color" content="#1755cf" />
+
+        <title>AI-Assisted Swift Development: A Practical Guide | Antonio Palomba</title>
+
+        <!-- FAV and TOUCH ICONS -->
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
+        <link rel="apple-touch-icon" href="images/ico/apple-touch-icon.png">
+
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- STYLES -->
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="js/nprogress/nprogress.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery.magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts/fontello/css/fontello.css">
+        <link rel="stylesheet" type="text/css" href="css/align.css">
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/768.css">
+
+        <!-- INITIAL SCRIPTS -->
+<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+
+
+<body>
+
+        <!-- PAGE -->
+    <div id="page" class="hfeed site">
+
+            <!-- .site-main -->
+              <main id="main" class="site-main cd-main">
+
+
+                <!-- HEADER -->
+                <header id="masthead" class="header" role="banner">
+
+                    <!-- header-wrap -->
+                                <div id="blog-header-partial"></div>
+
+                    <!-- header-wrap -->
+
+                </header>
+                <!-- HEADER -->
+
+
+
+
+                <!-- site-middle -->
+                <div class="site-middle">
+
+
+                    <div class="layout-medium">
+                        <div id="primary" class="content-area">
+
+
+                            <!-- site-content -->
+                            <div id="content" class="site-content" role="main">
+                                <div class="blog-single page-layout">
+
+                                        <!-- .hentry -->
+                                        <article class="post type-post hentry">
+
+                                          <!-- .entry-header -->
+                                          <header class="entry-header">
+                                            <h1 class="entry-title">AI-Assisted Swift Development: A Practical Guide</h1>
+
+                                            <!-- .entry-meta -->
+                                            <div class="entry-meta">
+                                                <span class="entry-date">
+                                                    <time class="entry-date" datetime="2025-06-24">June 24, 2025</time>
+                                                </span>
+                                                <span class="cat-links">
+                                                    <a href="#" title="View all posts in iOS Development" rel="category tag">iOS Development</a>
+                                                </span>
+                                            </div>
+                                            <!-- .entry-meta -->
+
+                                          </header>
+                                          <!-- .entry-header -->
+
+                                          <!-- .featured-image -->
+                                          <div class="featured-image">
+                                            <img src="images/blog/ai-swift/ai-cover.png" alt="Multiple terminal tabs for multi-agent AI development">
+                                          </div>
+                                          <!-- .featured-image -->
+
+
+                                          <!-- .entry-content -->
+                                          <div class="entry-content">
+
+                                            <p><em>Based on <strong>Paul Hudson's</strong> approach to working with AI coding agents</em></p>
+
+                                            <p>If you have never used an AI coding agent before, this guide will walk you through the essentials: how to work with them efficiently, how to connect them to Xcode, and how to avoid the most common mistakes. No prior experience with AI tools is required.</p>
+
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sc6pvW6vQzA?si=WswvirH6RC_Firtq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                                            <hr>
+
+                                            <h2>1. Start small, always</h2>
+
+                                            <p>The single most important habit: ask the AI to build <strong>one feature at a time</strong>.</p>
+
+                                            <p>If you ask for too much at once, the agent will start reiterating on its own errors, trying fix after fix, and burning a lot of tokens in the process. It is slow, expensive, and messy. One small, well-defined request at a time is faster and more reliable.</p>
+
+                                            <h2>2. Running multiple agents at once</h2>
+
+                                            <p>You can run more than one AI conversation at the same time, but be careful: if two agents touch the same code, they will overlap and create a mess.</p>
+
+                                            <p>The safe way is to assign each agent a <strong>different layer of work</strong>:</p>
+
+                                            <ul>
+                                                <li><strong>Agent 1</strong>: modifies the code and adds a new feature</li>
+                                                <li><strong>Agent 2</strong>: adds code comments</li>
+                                                <li><strong>Agent 3</strong>: writes documentation (for example, an <code>.md</code> file)</li>
+                                            </ul>
+
+                                            <p>A practical tip: open one terminal window with multiple tabs, and rename each tab after its agent. That way you never lose track of who is doing what.</p>
+
+                                            <p><img src="images/blog/ai-swift/02.png" alt="Terminal tab configuration for multi-agent setup" class="aligncenter"></p>
+
+                                            <h2>3. Git is your time machine</h2>
+
+                                            <p>If your project uses Git, you can always go back and restore a previous version of the project, no matter what the agent did. This is your safety net. <strong>Commit often, especially before letting an agent make big changes.</strong></p>
+
+                                            <p><img src="images/blog/ai-swift/03.png" alt="Git version history as a safety net" class="aligncenter"></p>
+
+                                            <h2>4. Understanding the context window</h2>
+
+                                            <p>An AI agent has a limited "working memory" called the <strong>context window</strong>. Everything you say, every file it reads, and every error it sees takes up space in it.</p>
+
+                                            <p>Two useful commands inside Claude Code:</p>
+
+                                            <ul>
+                                                <li><code>/context</code> — shows how many tokens you are using and where they go (system prompt, tools, messages, and so on). One interesting item is the <strong>autocompact buffer</strong>: when the agent runs out of memory, it decides which information to preserve and rearranges it automatically.</li>
+                                                <li><code>/compact</code> — lets you compact the conversation manually, and you can add <strong>custom instructions</strong> about what to keep. Very useful when a project gets big.</li>
+                                            </ul>
+
+                                            <p><img src="images/blog/ai-swift/04.png" alt="Context window token usage in Claude Code" class="aligncenter"></p>
+
+                                            <h3>Context pollution</h3>
+
+                                            <p>When the context window fills up with past attempts and past errors, the model gets measurably worse. Think of a person working for hours without a break: still active, but no longer sharp. This is called <strong>context pollution</strong>, and it is the reason why fresh sessions with clean context often outperform one long session.</p>
+
+                                            <h2>5. Why use AI agents directly inside Xcode</h2>
+
+                                            <p>Apple provides a system prompt to agents running inside Xcode, giving them up-to-date information about new Swift features. If you use a standalone app instead, you may need to manually provide information about recent APIs (for example, Liquid Glass), because models are often trained on older data.</p>
+
+                                            <p><img src="images/blog/ai-swift/05.png" alt="AI agent running inside Xcode" class="aligncenter"></p>
+
+                                            <p><strong>The downside:</strong> all that extra information is attached to your requests under the hood, and it costs tokens. Researchers who intercepted Xcode's traffic found that on top of Claude Code's own system prompt, Xcode adds Apple-specific instructions, the full definitions of about 20 Xcode tools, and, on every single prompt, your entire project structure. In one documented test, a one-word "hello" carried a project listing thousands of tokens long.</p>
+
+                                            <p>Two things soften this. Apple has optimized token usage for these integrations, and prompt caching makes the repeated static parts (system prompt, tool definitions) much cheaper after the first request. But the richer context still means each conversation consumes more credits than a bare prompt would, especially in large projects. You can see it yourself: run <code>/context</code> inside Xcode and check how many tokens the system prompt and tools occupy before you have typed anything.</p>
+
+                                            <blockquote>
+                                                If you are interested in the research about this, check: <a href="https://www.jackpearce.co.uk/posts/extracting-xcodes-claude-code-prompt/" target="_blank" rel="noopener noreferrer">extracting-xcodes-claude-code-prompt</a>
+                                            </blockquote>
+
+                                            <h2>6. Connecting Claude CLI to Xcode (MCP)</h2>
+
+                                            <p>You can connect third-party editors and CLIs to Xcode through <strong>MCP servers</strong> (Model Context Protocol). This gives Claude CLI access to all of Xcode's functionality: building, running tests, reading build logs, and more.</p>
+
+                                            <p><img src="images/blog/ai-swift/06.png" alt="MCP server configuration" class="aligncenter"></p>
+                                            <p><img src="images/blog/ai-swift/07.png" alt="Xcode MCP settings" class="aligncenter"></p>
+
+                                            <p>Setup:</p>
+
+                                            <ol>
+                                                <li>In Xcode, go to <strong>Settings &gt; Intelligence</strong></li>
+                                                <li>Under <strong>Model Context Protocol</strong>, toggle on <strong>Allow external agents to use Xcode tools</strong></li>
+                                                <li>Copy the command from Apple's documentation and run it in the terminal:</li>
+                                            </ol>
+
+                                            <pre><code>claude mcp add --transport stdio xcode -- xcrun mcpbridge</code></pre>
+
+                                            <ol start="4">
+                                                <li>Wait for Claude to ask you to restart</li>
+                                            </ol>
+
+                                            <p>Once connected, ask Claude: <em>"What Xcode MCP tools do you have?"</em> It will list everything it can do: build the project, run tests, read and search files, get filtered build logs, and more.</p>
+
+                                            <p><img src="images/blog/ai-swift/08.png" alt="Claude listing available Xcode MCP tools" class="aligncenter"></p>
+
+                                            <p><strong>A nice trick</strong>: you can ask it to render a preview of a view as a snapshot image, and it will save the file directly in the working directory.</p>
+
+                                            <p><img src="images/blog/ai-swift/09.png" alt="Claude rendering a SwiftUI view snapshot" class="aligncenter"></p>
+
+                                            <h2>7. Managing permissions</h2>
+
+                                            <p>Inside Claude CLI, use <code>/permissions</code> to define what Claude is allowed to do in the terminal without asking every time. Permission rules are tool names, optionally with a specifier, for example <code>Bash(ls:*)</code>.</p>
+
+                                            <p><img src="images/blog/ai-swift/10.png" alt="Claude CLI permissions management" class="aligncenter"></p>
+
+                                            <h2>8. Two prompts worth stealing</h2>
+
+                                            <p><strong>Before you build.</strong> Instead of describing your app and hoping for the best, flip the conversation:</p>
+
+                                            <blockquote>
+                                                "Ask me a comprehensive set of questions to help design it."
+                                            </blockquote>
+
+                                            <p>Claude will interview you, and you will discover what you actually want to build.</p>
+
+                                            <p><img src="images/blog/ai-swift/11.png" alt="Claude interviewing you about your app design" class="aligncenter"></p>
+
+                                            <p><strong>Before App Review.</strong> During the App Review process, Apple may ask you about your code choices, and you need to answer properly. To prepare:</p>
+
+                                            <blockquote>
+                                                "Grill me about the code base to check if I understand it."
+                                            </blockquote>
+
+                                            <p>If an AI wrote part of your code, this is how you make sure you still own it.</p>
+
+                                            <h2>9. The Ralph Wiggum methodology</h2>
+
+                                            <p><img src="images/blog/ai-swift/12.png" alt="Ralph Wiggum methodology diagram" class="aligncenter"></p>
+
+                                            <p>This one is more advanced, but worth knowing.</p>
+
+                                            <p>Around May 2025, developer Geoffrey Huntley identified a bottleneck in agentic coding: the human. Models were capable, but they had to stop and wait for a person to review and re-prompt after every error.</p>
+
+                                            <p>His idea, named after Ralph Wiggum from The Simpsons, is a loop: pipe the model's entire output (failures, stack traces, hallucinations included) back into its own input, over and over, until the task is done. A "contextual pressure cooker": press the model against its own failures long enough, and it will eventually find a correct solution just to escape the loop.</p>
+
+                                            <p>The result is a shift from "Waterfall" planning to something closer to true Agile for AI: instead of following a brittle multi-step plan, the agent grabs a ticket, finishes it, and looks for the next one.</p>
+
+                                            <p><img src="images/blog/ai-swift/13.png" alt="Agile loop diagram for AI agents" class="aligncenter"></p>
+
+                                            <h3>Plugin vs bash script</h3>
+
+                                            <p>There are two ways to run Ralph:</p>
+
+                                            <ul>
+                                                <li><strong>Claude Plugin</strong>: install it inside Claude Code via <code>/plugin</code>, typing <code>ralph</code>. It works within a single session, using a Stop hook that blocks Claude from exiting and feeds the same prompt back until completion.</li>
+                                                <li><strong>Bash script</strong>: exits and restarts the session on every iteration.</li>
+                                            </ul>
+
+                                            <p>The bash script has one big advantage: because every iteration starts fresh, it solves the context pollution problem described earlier. This is why Paul Hudson prefers it.</p>
+
+                                            <h2>10. Documentation and AI</h2>
+
+                                            <p>Some websites let you access an <code>.md</code> version of any documentation page, which is perfect for feeding to an LLM. For example, eToro's API docs: add <code>.md</code> to the end of a page URL and you get a clean markdown version.</p>
+
+                                            <p>Apple does not offer this yet. Information about new Swift features reaches the models through the system prompts Apple provides inside Xcode (see section 5).</p>
+
+                                            <p><img src="images/blog/ai-swift/14.png" alt="Documentation in markdown format for AI consumption" class="aligncenter"></p>
+                                            <p><img src="images/blog/ai-swift/15.png" alt="API documentation example" class="aligncenter"></p>
+
+                                            <h2>11. Using a refined CLAUDE.md file</h2>
+
+                                            <p>Every time Claude starts in a new directory, it creates a <code>CLAUDE.md</code> file: the system prompt used for every request in that project.</p>
+
+                                            <p>Paul Hudson maintains a Swift-refined version of this file, available at: <a href="https://github.com/twostraws/SwiftAgents" target="_blank" rel="noopener noreferrer">github.com/twostraws/SwiftAgents</a></p>
+
+                                            <p>The fastest way to use it: copy his file over the default one.</p>
+
+                                            <h3>Automating it with a bash function</h3>
+
+                                            <p><img src="images/blog/ai-swift/16.png" alt="Bash function for automating CLAUDE.md setup" class="aligncenter"></p>
+
+                                            <p>You can create a terminal function that copies the file into any project before launching Claude. Add this to your <code>.zshrc</code>:</p>
+
+<pre><code># Functions (remember to use source ~/.zshrc to reload when adding new functions)
+swiftagent() {
+  local source="/path/to/your/AgentsMDs/CLAUDE.md"
+
+  if [ ! -f "$source" ]; then
+    echo "❌ Source file not found"
+    return 1
+  fi
+
+  if cp -i "$source" ./CLAUDE.md; then
+    echo "✅ CLAUDE.md copied to $(pwd)"
+  else
+    echo "❌ Copy failed"
+    return 1
+  fi
+}</code></pre>
+
+                                            <p>Reload the terminal session:</p>
+
+                                            <pre><code>source ~/.zshrc</code></pre>
+
+                                            <p>Then, in any project folder, just run:</p>
+
+                                            <pre><code>swiftagent</code></pre>
+
+                                            <h2>12. Claude Skills</h2>
+
+                                            <p>Skills are custom agents designed to carry out specific tasks. Two open repositories are worth exploring, with best-practice instructions for coding in Swift:</p>
+
+                                            <ul>
+                                                <li>Paul Hudson: <a href="https://github.com/twostraws/Swift-Agent-Skills" target="_blank" rel="noopener noreferrer">github.com/twostraws/Swift-Agent-Skills</a></li>
+                                                <li>Antoine van der Lee: <a href="https://github.com/AvdLee/SwiftUI-AgentSkill/blob/main/swiftui-expert-skill/SKILL.md" target="_blank" rel="noopener noreferrer">SwiftUI-AgentSkill</a></li>
+                                            </ul>
+
+                                            <hr>
+
+                                            <h2>Quick reference</h2>
+
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Command</th>
+                                                        <th>What it does</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><code>CMD + 0</code></td>
+                                                        <td>Hide the AI panel in Xcode</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>/context</code></td>
+                                                        <td>Show token usage per category</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>/compact</code></td>
+                                                        <td>Compact the context, with optional custom instructions</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>/permissions</code></td>
+                                                        <td>Define what Claude can run in the terminal</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>/plugin</code></td>
+                                                        <td>Install plugins (for example, Ralph)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <h2>Key takeaways</h2>
+
+                                            <ul>
+                                                <li>One feature at a time, always</li>
+                                                <li>Multiple agents are fine, but keep them on separate layers</li>
+                                                <li>Commit often: Git is your undo button</li>
+                                                <li>A polluted context makes the model dumber, so compact or restart</li>
+                                                <li>Use Claude inside Xcode (or connected via MCP) for up-to-date Swift knowledge</li>
+                                                <li>Let Claude interview you before building, and grill you after</li>
+                                            </ul>
+
+                                            <!-- .entry-meta -->
+                                            <footer class="entry-meta tags">
+                                                <a href="#" rel="tag">Swift</a> <a href="#" rel="tag">AI</a> <a href="#" rel="tag">Xcode</a> <a href="#" rel="tag">Claude</a> <a href="#" rel="tag">iOS</a>
+                                            </footer>
+                                            <!-- .entry-meta -->
+
+                                          </div>
+                                          <!-- .entry-content -->
+
+                                          <!-- .more-articles -->
+                                          <div class="more-articles related-posts">
+                                              <div class="section-title center">
+                                                  <h2><i>More Articles</i></h2>
+                                              </div>
+                                              <div id="recent-posts-cards" class="latest-posts media-grid" data-current="blog-article-ai-swift.html"></div>
+                                          </div>
+                                          <!-- .more-articles -->
+
+
+                                        </article>
+                                        <!-- .hentry -->
+
+
+                                </div>
+                                <!-- .blog-single -->
+
+
+                </div>
+                            <!-- site-content -->
+
+                        </div>
+                        <!-- primary -->
+
+
+
+
+
+
+                    </div>
+                    <!-- layout -->
+
+
+                </div>
+                <!-- site-middle -->
+
+
+
+        </main>
+                <!-- .site-main -->
+
+
+
+
+                <!-- ALERT : used for contact form mail delivery alert -->
+                <div class="site-alert animated"></div>
+
+
+
+
+            </div>
+            <!-- PAGE -->
+
+
+
+
+        <!-- SCRIPTS -->
+        <script src="js/fastclick.js"></script>
+        <script src="js/jquery.address.js"></script>
+        <script src="js/nprogress/nprogress.js"></script>
+        <script src="js/jquery.isotope.min.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <script src="js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/partials-loader.js"></script>
+        <script src="js/code-copy.js"></script>
+        <script>
+            loadPartial('blog-header-partial', 'partials/blog-header.html');
+            loadRecentPostsCards('recent-posts-cards', 'data/posts.json');
+        </script>
+
+</body>
+</html>

@@ -2707,3 +2707,48 @@ select:focus,
 #nprogress .spinner-icon {
   	border-top-color: #4ECE99; border-left-color: #4ECE99;
 	}
+
+
+/* BLOG CARD THUMBNAILS - landscape 16:9 crop */
+.latest-posts .media-box,
+.more-articles .media-box {
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	}
+.latest-posts .media-box img,
+.more-articles .media-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	}
+
+
+/* CODE BLOCK COPY BUTTON */
+.entry-content pre {
+	position: relative;
+	}
+.copy-code-btn {
+	position: absolute; top: 8px; right: 8px;
+	padding: 3px 10px; font-size: 11px; font-family: inherit; font-weight: 600;
+	background: rgba(255,255,255,0.12); color: #ccc;
+	border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;
+	cursor: pointer; transition: background 0.15s, color 0.15s;
+	}
+.copy-code-btn:hover {
+	background: rgba(255,255,255,0.25); color: #fff;
+	}
+.copy-code-btn.copied {
+	background: #4ECE99; color: #fff; border-color: #4ECE99;
+	}
+
+
+/* BLOG LIST - featured image aspect ratio */
+.blog-regular .featured-image {
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	}
+.blog-regular .featured-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	}

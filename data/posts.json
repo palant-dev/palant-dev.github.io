@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Visualize the SwiftUI Lifecycle: What Actually Fires and When",
+    "url": "blog-article-swiftui-lifecycle.html",
+    "date": "2025-07-02",
+    "image": "images/blog/swiftui-lifecycle/cover.png",
+    "category": "iOS Development"
+  },
+  {
+    "title": "AI-Assisted Swift Development: A Practical Guide",
+    "url": "blog-article-ai-swift.html",
+    "date": "2025-06-24",
+    "image": "images/blog/ai-swift/cover.png",
+    "category": "iOS Development"
+  }
+]

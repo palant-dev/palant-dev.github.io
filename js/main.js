@@ -141,7 +141,8 @@
 
 		// ------------------------------
 		// HEADER FUNCTIONS
-		$('.search-toggle').on("click", function () {
+		// Use event delegation so this works when the header is loaded as a partial
+		$(document).on("click", '.search-toggle', function () {
 			$('html').toggleClass('is-search-toggled-on');
 			$(".header-search input").trigger("focus");
 		});

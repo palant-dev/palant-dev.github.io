@@ -322,18 +322,21 @@
 	/* BLOG */
 	.content-area:not(.with-sidebar) .post .entry-content > p img:not(.alignleft):not(.alignright),
 	.content-area:not(.with-sidebar) .blog-single .entry-content .gallery {
-		width: 158%; max-width: none; margin-left: -29%; 
+		width: 100%; max-width: 100%; margin-left: 0;
 		}
 	/* BLOG SINGLE */
-	.content-area:not(.with-sidebar) .blog-single .featured-image, 
+	.content-area:not(.with-sidebar) .blog-single .featured-image,
 	.content-area:not(.with-sidebar) .blog-single .related-posts {
-		width: 122%; margin-left: -11%;
+		width: 100%; margin-left: 0;
 		}
-	.blog-single .entry-content { 
-		max-width: 540px; 
+	.blog-single .entry-content {
+		max-width: 540px;
+		}
+	.content-area:not(.with-sidebar) .blog-single .entry-content {
+		max-width: 720px;
 		}
 	.entry-content > .gallery {
-		width: 130%; margin-left: -15%;
+		width: 100%; margin-left: 0;
 		}
 		
 	/* Social Feed Widget */
