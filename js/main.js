@@ -260,6 +260,9 @@
 		// FLUID MEDIA
 		fluidMedia();
 
+		// BLOG POST LIST
+		setupBlogList();
+
 	}
 	// ------------------------------
 
@@ -559,6 +562,23 @@
 
 		if ($('iframe,video').length) {
 			$("html").fitVids();
+		}
+
+	}
+	// ------------------------------
+
+
+	// ------------------------------
+	// BLOG POST LIST
+	// Renders data/posts.json into #blog-post-list. Needed here (rather than
+	// blog.html's own inline script) because on the one-page layout, blog.html
+	// is fetched via AJAX and only its .page-single markup is extracted --
+	// its <script> tags never run.
+	function setupBlogList() {
+
+		var list = $('#blog-post-list');
+		if (list.length && list.is(':empty') && typeof window.loadPostList === 'function') {
+			window.loadPostList('blog-post-list', 'data/posts.json');
 		}
 
 	}

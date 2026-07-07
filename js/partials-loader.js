@@ -94,7 +94,60 @@
             });
     }
 
+    var MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'];
+
+    function formatDate(isoDate) {
+        var parts = isoDate.split('-');
+        var year = parts[0], month = parseInt(parts[1], 10) - 1, day = parseInt(parts[2], 10);
+        return MONTH_NAMES[month] + ' ' + day + ', ' + year;
+    }
+
+    // Full post list renderer — used on the main Blog page
+    function loadPostList(containerId, dataUrl) {
+        var container = document.getElementById(containerId);
+        if (!container) return;
+
+        fetch(dataUrl)
+            .then(function (r) {
+                if (!r.ok) throw new Error('[partials-loader] Could not load ' + dataUrl + ' (' + r.status + ')');
+                return r.json();
+            })
+            .then(function (posts) {
+                var sorted = posts.sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
+
+                container.innerHTML = sorted.map(function (post) {
+                    var cat = post.category
+                        ? '<span class="cat-links"><a href="#" title="View all posts in ' + post.category + '" rel="category tag">' + post.category + '</a></span>'
+                        : '';
+                    var img = post.image
+                        ? '<div class="featured-image"><a href="' + post.url + '"><img src="' + post.image + '" alt="' + post.title + '"></a></div>'
+                        : '';
+                    var excerpt = post.excerpt ? '<p>' + post.excerpt + '</p>' : '';
+
+                    return '<article class="hentry post">' +
+                        '<header class="entry-header">' +
+                        '<h2 class="entry-title"><a href="' + post.url + '">' + post.title + '</a></h2>' +
+                        '<div class="entry-meta">' +
+                        '<span class="entry-date"><time class="entry-date" datetime="' + post.date + '">' + formatDate(post.date) + '</time></span>' +
+                        cat +
+                        '</div>' +
+                        '</header>' +
+                        img +
+                        '<div class="entry-content excerpt">' +
+                        excerpt +
+                        '<p class="more"><a href="' + post.url + '" class="more-link">Read More</a></p>' +
+                        '</div>' +
+                        '</article>';
+                }).join('');
+            })
+            .catch(function (err) {
+                console.error(err);
+            });
+    }
+
     window.loadPartial = loadPartial;
     window.loadRecentPosts = loadRecentPosts;
     window.loadRecentPostsCards = loadRecentPostsCards;
+    window.loadPostList = loadPostList;
 })();
