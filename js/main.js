@@ -151,6 +151,38 @@
 
 
 		// ------------------------------
+		// BLOG SEARCH
+		// #search-form is loaded as part of the header partial, so use event delegation.
+		// On the blog list page, filter the posts already on screen; anywhere else,
+		// jump to the blog page with the query so it can filter on load.
+		$(document).on("submit", '#search-form', function (event) {
+			event.preventDefault();
+
+			var query = $(this).find('#search').val().trim();
+
+			if ($('#blog-post-list').length && typeof window.filterPostList === 'function') {
+				window.filterPostList('blog-post-list', 'data/posts.json', query);
+			} else {
+				window.location.href = 'blog.html' + (query ? '?s=' + encodeURIComponent(query) : '');
+			}
+		});
+		// ------------------------------
+
+
+
+		// ------------------------------
+		// STICKY MINIMAL HEADER (blog pages) - shrinks on scroll
+		// header is loaded as a partial, so bind lazily and re-check on scroll
+		var toggleStickyHeader = function () {
+			$('.header--blog-minimal').toggleClass('is-scrolled', $(window).scrollTop() > 10);
+		};
+		toggleStickyHeader();
+		$(window).on('scroll', toggleStickyHeader);
+		// ------------------------------
+
+
+
+		// ------------------------------
 		// remove click delay on touch devices
 		FastClick.attach(document.body);
 		// ------------------------------	
@@ -574,10 +606,35 @@
 	// blog.html's own inline script) because on the one-page layout, blog.html
 	// is fetched via AJAX and only its .page-single markup is extracted --
 	// its <script> tags never run.
+	//
+	// If the URL carries a ?s= query (a search submitted from another page),
+	// render the filtered results instead of the full list, and reflect the
+	// query back into the search box once the header partial has loaded.
 	function setupBlogList() {
 
 		var list = $('#blog-post-list');
-		if (list.length && list.is(':empty') && typeof window.loadPostList === 'function') {
+		if (!list.length || !list.is(':empty')) { return; }
+
+		var query = new URLSearchParams(window.location.search).get('s');
+
+		if (query && typeof window.filterPostList === 'function') {
+			window.filterPostList('blog-post-list', 'data/posts.json', query);
+			$('html').addClass('is-search-toggled-on');
+
+			// header partial loads asynchronously - poll briefly until #search shows up
+			var attempts = 0;
+			var fillSearchBox = setInterval(function () {
+				attempts++;
+				var $search = $('#search');
+				if ($search.length) {
+					$search.val(query);
+					clearInterval(fillSearchBox);
+				} else if (attempts > 20) {
+					clearInterval(fillSearchBox);
+				}
+			}, 100);
+
+		} else if (typeof window.loadPostList === 'function') {
 			window.loadPostList('blog-post-list', 'data/posts.json');
 		}
 
