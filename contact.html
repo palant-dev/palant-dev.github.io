@@ -165,91 +165,46 @@
                                                 
                                                 
                                                 
-                                                <!-- section-title -->
-                                                <div class="section-title center">    
-                                                    <h2>
-                                                        <i>Socials</i>
-                                                    </h2>
+                                                <!-- CONTACT LEAD -->
+                                                <div class="contact-lead">
+                                                    <h2>Let’s talk</h2>
+                                                    <p>Have a project in mind, a question, or just want to say hi? Reach out.</p>
                                                 </div>
-                                                <!-- section-title -->
-                            
-                                                <!-- SOCIAL -->
-                                                <p class="center">
-                                                    <a class="social-link linkedin" href="#"></a>
-                                                    <a class="social-link github" href="#"></a>
-                                                    <a class="social-link instagram" href="#"></a>
-                                                    <a class="social-link twitter" href="#"></a>
-                                                </p>
-                                                
-                                                
+                                                <!-- CONTACT LEAD -->
 
-                                                  <!-- SOCIAL -->
-                            
-                                                 
-                            
-                            
-                            
-                                                <!-- section-title -->
-                                                <div class="section-title center">    
-                                                    <h2>
-                                                        <i>Reach Me</i>
-                                                    </h2>
-                                                </div>
-                                                <!-- section-title -->
-                                                    
-                                                  
-                                                        
-                                                <!-- row -->
-                                                <div class="row">
-                                                    
-                                                    <!-- column 3/12 -->
-                                                    <div class="col-xs-6 col-sm-3">
-                        
-                                                        
-                        
-                                                    </div>
-                                                    <!-- column 3/12 -->
-                                                    
-                                                    <!-- column 3/12 -->
-                                                    <div class="col-xs-6 col-sm-3">
-                        
-                                                        <!-- fun-fact -->
-                                                        <div class="fun-fact">
-                                                            <!--<i class="pe-7s-call"></i>-->
-                                                            <img src="images/site/phone.png" alt="image"/>
-                                                            <h4>+39 351 506 0104</h4>
-                                                        </div>
-                                                        <!-- fun-fact -->
-                        
-                                                    </div>
-                                                    <!-- column 3/12 -->
-                                                    
-                                                    <!-- column 3/12 -->
-                                                    <div class="col-xs-6 col-sm-3">
-                        
-                                                        <!-- fun-fact -->
-                                                        <div class="fun-fact">
-                                                            <!--<i class="pe-7s-mail"></i>-->
-                                                            <img src="images/site/mail.png" alt="image"/>
-                                                            <h4>antonio.palomba2015 [at] gmail.com</h4>
-                                                        </div>
-                                                        <!-- fun-fact -->
-                        
-                                                    </div>
-                                                    <!-- column 3/12 -->
+                                                <!-- CONTACT CARDS -->
+                                                <div class="contact-cards">
 
-                                                    <!-- column 3/12 -->
-                                                    <div class="col-xs-6 col-sm-3">
-                        
-                                                        
-                        
+                                                    <div class="contact-card contact-card--location">
+                                                        <span class="contact-card-icon contact-card-icon--location">
+                                                            <i class="pw-icon-location-outline"></i>
+                                                            <span class="location-pulse"></span>
+                                                        </span>
+                                                        <span class="contact-card-label">Currently in</span>
+                                                        <span class="contact-card-value">Bali, Indonesia 🇮🇩</span>
+                                                        <span class="contact-card-time"><span id="bali-time">--:--</span> local time · GMT+8</span>
                                                     </div>
-                                                    <!-- column 3/12 -->
-                        
-                                                    
-                        
+
+                                                    <a class="contact-card" href="mailto:antonio.palomba2015@gmail.com">
+                                                        <span class="contact-card-icon contact-card-icon--email"><i class="pw-icon-at"></i></span>
+                                                        <span class="contact-card-label">Email</span>
+                                                        <span class="contact-card-value">antonio.palomba2015<wbr>@gmail.com</span>
+                                                    </a>
+
                                                 </div>
-                                                <!-- row -->
+                                                <!-- CONTACT CARDS -->
+
+                                                <!-- CONTACT SOCIAL -->
+                                                <div class="contact-social-row">
+                                                    <span class="contact-social-label">Find me on</span>
+                                                    <div class="contact-social-links">
+                                                        <a class="social-link linkedin" href="https://www.linkedin.com/in/palant/" target="_blank" rel="noopener"></a>
+                                                        <a class="social-link github" href="https://github.com/palant-dev" target="_blank" rel="noopener"></a>
+                                                        <a class="social-link instagram" href="https://www.instagram.com/_palant_/" target="_blank" rel="noopener"></a>
+                                                        <!-- <a class="social-link twitter" href="https://twitter.com/tonypalomba92" target="_blank" rel="noopener"></a> -->
+                                                    </div>
+                                                </div>
+                                                <!-- CONTACT SOCIAL -->
                             
                             
                             
@@ -395,6 +350,18 @@
         <!--<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE"></script>-->
         
         <script src="js/main.js"></script>
+        <script>
+            (function () {
+                var el = document.getElementById("bali-time");
+                if (!el) return;
+                var formatter = new Intl.DateTimeFormat("en-GB", {
+                    hour: "2-digit", minute: "2-digit", timeZone: "Asia/Makassar"
+                });
+                function tick() { el.textContent = formatter.format(new Date()); }
+                tick();
+                setInterval(tick, 1000 * 30);
+            })();
+        </script>
         
 	</body>
 </html>

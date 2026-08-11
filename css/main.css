@@ -1006,9 +1006,81 @@ html .process img {
 	html .fun-fact img { 
 		width: 100%; max-width: 54px; margin: 0; margin-bottom: 14px;
 		}
-	.fun-fact h4 { 
-		max-width: 140px; margin: 0 auto; font-size: 13px; line-height: 1.4; font-weight: 300; letter-spacing: .02em; text-transform: uppercase; 
+	.fun-fact h4 {
+		max-width: 140px; margin: 0 auto; font-size: 13px; line-height: 1.4; font-weight: 300; letter-spacing: .02em; text-transform: uppercase;
 		}
+	.fun-fact a {
+		display: block; color: inherit;
+		}
+	.fun-fact a:hover h4 {
+		color: #096;
+		}
+
+/* CONTACT PAGE - lead, cards, social row */
+.contact-lead {
+	max-width: 480px; margin: 0 auto 2.6em; text-align: center;
+	}
+.contact-lead h2 {
+	margin: 0 0 .5em; font-size: 1.8em; font-weight: 600; color: #1C262B;
+	}
+.contact-lead p {
+	margin: 0; font-size: .95em; line-height: 1.6; opacity: .6;
+	}
+
+.contact-cards {
+	display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 640px; margin: 0 auto 3em;
+	}
+.contact-card {
+	display: flex; flex-direction: column; align-items: center; text-align: center;
+	flex: 1 1 240px; max-width: 300px; padding: 32px 24px;
+	background: #fff; border: 1px solid #ececec; border-radius: 16px; color: inherit; text-decoration: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+	}
+.contact-card:hover {
+	transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); border-color: transparent;
+	}
+.contact-card-icon {
+	position: relative; display: flex; align-items: center; justify-content: center;
+	width: 56px; height: 56px; margin-bottom: 18px; border-radius: 50%; font-size: 22px; color: #fff;
+	}
+.contact-card-icon i:before {
+	margin: 0;
+	}
+.contact-card-icon--location {
+	background: #096;
+	}
+.contact-card-icon--email {
+	background: #FF8600;
+	}
+.contact-card-label {
+	display: block; margin-bottom: 6px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .45;
+	}
+.contact-card-value {
+	display: block; font-size: 14.5px; font-weight: 500; word-break: break-word;
+	}
+.contact-card-time {
+	display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 8px; font-size: 12px; color: #999;
+	}
+
+/* location pulse badge, pinned to the corner of the location icon */
+.location-pulse {
+	position: absolute; top: -2px; right: -2px; width: 12px; height: 12px; border-radius: 50%; background: #2ecc71; border: 2px solid #fff;
+	}
+.location-pulse:before {
+	content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; border-radius: 50%; background: #2ecc71;
+	animation: location-pulse-ring 1.8s ease-out infinite;
+	}
+@keyframes location-pulse-ring {
+	0% { transform: scale(1); opacity: .7; }
+	100% { transform: scale(2.4); opacity: 0; }
+	}
+
+.contact-social-row {
+	margin: 0 0 2em; text-align: center;
+	}
+.contact-social-label {
+	display: block; margin-bottom: 14px; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .4;
+	}
 
 /* CLIENT */
 .client { 

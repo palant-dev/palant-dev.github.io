@@ -40,7 +40,7 @@ const structuredData = {
   "hasCredential": [
     {
       "@type": "BachelorDegree",
-      "name": "Bachelor of Science in Computer Science"
+      "name": "Bachelor of Science in Informatics and Database Engineering"
     }
   ]
 };
