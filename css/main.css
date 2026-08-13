@@ -425,20 +425,20 @@ textarea,
 	}
 
 /* HEADER NAVBAR (blog pages: flat minimal bar, no background photo) */
-.header--blog-minimal {
+.header--minimal {
 	display: block; padding: 0; background-color: #fff; background-image: none !important;
 	position: sticky; top: 0; z-index: 200;
 	transition: background-color 0.25s ease, backdrop-filter 0.25s ease;
 	}
-.header--blog-minimal.is-scrolled {
+.header--minimal.is-scrolled {
 	background-color: rgba(255, 255, 255, 0.65);
 	-webkit-backdrop-filter: blur(14px) saturate(180%);
 	backdrop-filter: blur(14px) saturate(180%);
 	}
-.header--blog-minimal:before {
+.header--minimal:before {
 	display: none;
 	}
-.header--blog-minimal .header-wrap.layout-full {
+.header--minimal .header-wrap.layout-full {
 	width: 100%; max-width: none; margin: 0;
 	}
 .header-navbar {
@@ -447,7 +447,7 @@ textarea,
 	border-bottom: 1px solid #ececec;
 	transition: padding 0.25s ease, box-shadow 0.25s ease;
 	}
-.header--blog-minimal.is-scrolled .header-navbar {
+.header--minimal.is-scrolled .header-navbar {
 	padding-top: 12px; padding-bottom: 12px;
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 	}
@@ -458,7 +458,7 @@ textarea,
 	height: 40px; width: auto; display: block;
 	transition: height 0.25s ease;
 	}
-.header--blog-minimal.is-scrolled .header-navbar-logo img {
+.header--minimal.is-scrolled .header-navbar-logo img {
 	height: 32px;
 	margin-top: 4px;
 	}
@@ -567,13 +567,13 @@ textarea,
 	}
 
 /* blog pages sit on a light header, not a dark photo - flip the search field to dark-on-light */
-.header--blog-minimal #search-form #search {
+.header--minimal #search-form #search {
 	color: #040404; border-bottom: 1px solid #ddd;
 	}
-.header--blog-minimal #search-form #search::-webkit-input-placeholder {
+.header--minimal #search-form #search::-webkit-input-placeholder {
 	color: rgba(4, 4, 4, 0.4);
 	}
-.header--blog-minimal #search-form #search::placeholder {
+.header--minimal #search-form #search::placeholder {
 	color: rgba(4, 4, 4, 0.4);
 	}
 #search-submit { 

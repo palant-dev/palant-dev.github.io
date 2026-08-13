@@ -174,7 +174,7 @@
 		// STICKY MINIMAL HEADER (blog pages) - shrinks on scroll
 		// header is loaded as a partial, so bind lazily and re-check on scroll
 		var toggleStickyHeader = function () {
-			$('.header--blog-minimal').toggleClass('is-scrolled', $(window).scrollTop() > 10);
+			$('.header--minimal').toggleClass('is-scrolled', $(window).scrollTop() > 10);
 		};
 		toggleStickyHeader();
 		$(window).on('scroll', toggleStickyHeader);
