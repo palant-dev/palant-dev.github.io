@@ -14,7 +14,7 @@ const structuredData = {
     "@type": "Consultant",
     "name": "Cutowl Srl"
   },
-  "description": "Experienced Program Manager with a strong technical background in software development, specializing in leading cross-functional teams and delivering complex technical projects. Currently seeking Program/Technical Program Management opportunities at FAANG companies.",
+  "description": "Experienced Program Manager with a strong technical background in software development, specializing in leading cross-functional teams and delivering complex technical projects. Currently Tech Mentor @ Apple Developer Academy Bali.",
   "alumniOf": [
     {
       "@type": "AcademicOrganization",
