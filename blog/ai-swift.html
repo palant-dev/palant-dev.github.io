@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js classic-page-layout " data-audio-wind="audio/wind.wav" data-audio-wind-reverse="audio/wind-reverse.wav" data-audio-tick="audio/tick.mp3">
+<html lang="en" class="no-js classic-page-layout " data-audio-wind="/audio/wind.wav" data-audio-wind-reverse="/audio/wind-reverse.wav" data-audio-tick="/audio/tick.mp3">
 <head>
 
         <meta charset="utf-8" />
@@ -12,26 +12,26 @@
         <title>AI-Assisted Swift Development: A Practical Guide | Antonio Palomba</title>
 
         <!-- FAV and TOUCH ICONS -->
-        <link rel="shortcut icon" href="images/ico/favicon.ico">
-        <link rel="apple-touch-icon" href="images/ico/apple-touch-icon.png">
+        <link rel="shortcut icon" href="/images/ico/favicon.ico">
+        <link rel="apple-touch-icon" href="/images/ico/apple-touch-icon.png">
 
         <!-- FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 
         <!-- STYLES -->
-        <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="js/nprogress/nprogress.css">
-        <link rel="stylesheet" type="text/css" href="js/jquery.magnific-popup/magnific-popup.css">
-        <link rel="stylesheet" type="text/css" href="css/fonts/fontello/css/fontello.css">
-        <link rel="stylesheet" type="text/css" href="css/align.css">
-        <link rel="stylesheet" type="text/css" href="css/layout.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/768.css">
+        <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/js/nprogress/nprogress.css">
+        <link rel="stylesheet" type="text/css" href="/js/jquery.magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" type="text/css" href="/css/fonts/fontello/css/fontello.css">
+        <link rel="stylesheet" type="text/css" href="/css/align.css">
+        <link rel="stylesheet" type="text/css" href="/css/layout.css">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/css/768.css">
 
         <!-- INITIAL SCRIPTS -->
-<script src="js/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
 </head>
 
 
@@ -94,7 +94,7 @@
 
                                           <!-- .featured-image -->
                                           <div class="featured-image">
-                                            <img src="images/blog/ai-swift/swift-ai-guide-cover.png" alt="Multiple terminal tabs for multi-agent AI development">
+                                            <img src="/images/blog/ai-swift/swift-ai-guide-cover.png" alt="Multiple terminal tabs for multi-agent AI development">
                                           </div>
                                           <!-- .featured-image -->
 
@@ -130,13 +130,13 @@
 
                                             <p>A practical tip: open one terminal window with multiple tabs, and rename each tab after its agent. That way you never lose track of who is doing what.</p>
 
-                                            <p><img src="images/blog/ai-swift/02.png" alt="Terminal tab configuration for multi-agent setup" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/02.png" alt="Terminal tab configuration for multi-agent setup" class="aligncenter"></p>
 
                                             <h2>3. Git is your time machine</h2>
 
                                             <p>If your project uses Git, you can always go back and restore a previous version of the project, no matter what the agent did. This is your safety net. <strong>Commit often, especially before letting an agent make big changes.</strong></p>
 
-                                            <p><img src="images/blog/ai-swift/03.png" alt="Git version history as a safety net" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/03.png" alt="Git version history as a safety net" class="aligncenter"></p>
 
                                             <h2>4. Understanding the context window</h2>
 
@@ -149,7 +149,7 @@
                                                 <li><code>/compact</code> — lets you compact the conversation manually, and you can add <strong>custom instructions</strong> about what to keep. Very useful when a project gets big.</li>
                                             </ul>
 
-                                            <p><img src="images/blog/ai-swift/04.png" alt="Context window token usage in Claude Code" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/04.png" alt="Context window token usage in Claude Code" class="aligncenter"></p>
 
                                             <h3>Context pollution</h3>
 
@@ -159,7 +159,7 @@
 
                                             <p>Apple provides a system prompt to agents running inside Xcode, giving them up-to-date information about new Swift features. If you use a standalone app instead, you may need to manually provide information about recent APIs (for example, Liquid Glass), because models are often trained on older data.</p>
 
-                                            <p><img src="images/blog/ai-swift/05.png" alt="AI agent running inside Xcode" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/05.png" alt="AI agent running inside Xcode" class="aligncenter"></p>
 
                                             <p><strong>The downside:</strong> all that extra information is attached to your requests under the hood, and it costs tokens. Researchers who intercepted Xcode's traffic found that on top of Claude Code's own system prompt, Xcode adds Apple-specific instructions, the full definitions of about 20 Xcode tools, and, on every single prompt, your entire project structure. In one documented test, a one-word "hello" carried a project listing thousands of tokens long.</p>
 
@@ -173,8 +173,8 @@
 
                                             <p>You can connect third-party editors and CLIs to Xcode through <strong>MCP servers</strong> (Model Context Protocol). This gives Claude CLI access to all of Xcode's functionality: building, running tests, reading build logs, and more.</p>
 
-                                            <p><img src="images/blog/ai-swift/06.png" alt="MCP server configuration" class="aligncenter"></p>
-                                            <p><img src="images/blog/ai-swift/07.png" alt="Xcode MCP settings" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/06.png" alt="MCP server configuration" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/07.png" alt="Xcode MCP settings" class="aligncenter"></p>
 
                                             <p>Setup:</p>
 
@@ -192,17 +192,17 @@
 
                                             <p>Once connected, ask Claude: <em>"What Xcode MCP tools do you have?"</em> It will list everything it can do: build the project, run tests, read and search files, get filtered build logs, and more.</p>
 
-                                            <p><img src="images/blog/ai-swift/08.png" alt="Claude listing available Xcode MCP tools" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/08.png" alt="Claude listing available Xcode MCP tools" class="aligncenter"></p>
 
                                             <p><strong>A nice trick</strong>: you can ask it to render a preview of a view as a snapshot image, and it will save the file directly in the working directory.</p>
 
-                                            <p><img src="images/blog/ai-swift/09.png" alt="Claude rendering a SwiftUI view snapshot" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/09.png" alt="Claude rendering a SwiftUI view snapshot" class="aligncenter"></p>
 
                                             <h2>7. Managing permissions</h2>
 
                                             <p>Inside Claude CLI, use <code>/permissions</code> to define what Claude is allowed to do in the terminal without asking every time. Permission rules are tool names, optionally with a specifier, for example <code>Bash(ls:*)</code>.</p>
 
-                                            <p><img src="images/blog/ai-swift/10.png" alt="Claude CLI permissions management" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/10.png" alt="Claude CLI permissions management" class="aligncenter"></p>
 
                                             <h2>8. Two prompts worth stealing</h2>
 
@@ -214,7 +214,7 @@
 
                                             <p>Claude will interview you, and you will discover what you actually want to build.</p>
 
-                                            <p><img src="images/blog/ai-swift/11.png" alt="Claude interviewing you about your app design" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/11.png" alt="Claude interviewing you about your app design" class="aligncenter"></p>
 
                                             <p><strong>Before App Review.</strong> During the App Review process, Apple may ask you about your code choices, and you need to answer properly. To prepare:</p>
 
@@ -226,7 +226,7 @@
 
                                             <h2>9. The Ralph Wiggum methodology</h2>
 
-                                            <p><img src="images/blog/ai-swift/12.png" alt="Ralph Wiggum methodology diagram" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/12.png" alt="Ralph Wiggum methodology diagram" class="aligncenter"></p>
 
                                             <p>This one is more advanced, but worth knowing.</p>
 
@@ -236,7 +236,7 @@
 
                                             <p>The result is a shift from "Waterfall" planning to something closer to true Agile for AI: instead of following a brittle multi-step plan, the agent grabs a ticket, finishes it, and looks for the next one.</p>
 
-                                            <p><img src="images/blog/ai-swift/13.png" alt="Agile loop diagram for AI agents" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/13.png" alt="Agile loop diagram for AI agents" class="aligncenter"></p>
 
                                             <h3>Plugin vs bash script</h3>
 
@@ -255,8 +255,8 @@
 
                                             <p>Apple does not offer this yet. Information about new Swift features reaches the models through the system prompts Apple provides inside Xcode (see section 5).</p>
 
-                                            <p><img src="images/blog/ai-swift/14.png" alt="Documentation in markdown format for AI consumption" class="aligncenter"></p>
-                                            <p><img src="images/blog/ai-swift/15.png" alt="API documentation example" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/14.png" alt="Documentation in markdown format for AI consumption" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/15.png" alt="API documentation example" class="aligncenter"></p>
 
                                             <h2>11. Using a refined CLAUDE.md file</h2>
 
@@ -268,7 +268,7 @@
 
                                             <h3>Automating it with a bash function</h3>
 
-                                            <p><img src="images/blog/ai-swift/16.png" alt="Bash function for automating CLAUDE.md setup" class="aligncenter"></p>
+                                            <p><img src="/images/blog/ai-swift/16.png" alt="Bash function for automating CLAUDE.md setup" class="aligncenter"></p>
 
                                             <p>You can create a terminal function that copies the file into any project before launching Claude. Add this to your <code>.zshrc</code>:</p>
 
@@ -366,7 +366,7 @@ swiftagent() {
                                               <div class="section-title center">
                                                   <h2><i>More Articles</i></h2>
                                               </div>
-                                              <div id="recent-posts-cards" class="latest-posts media-grid" data-current="blog-article-ai-swift.html"></div>
+                                              <div id="recent-posts-cards" class="latest-posts media-grid" data-current="/blog/ai-swift.html"></div>
                                           </div>
                                           <!-- .more-articles -->
 
@@ -418,22 +418,22 @@ swiftagent() {
 
 
         <!-- SCRIPTS -->
-        <script src="js/fastclick.js"></script>
-        <script src="js/jquery.address.js"></script>
-        <script src="js/nprogress/nprogress.js"></script>
-        <script src="js/jquery.isotope.min.js"></script>
-        <script src="js/imagesloaded.pkgd.min.js"></script>
-        <script src="js/jquery.fitvids.js"></script>
-        <script src="js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/jquery.validate.min.js"></script>
+        <script src="/js/fastclick.js"></script>
+        <script src="/js/jquery.address.js"></script>
+        <script src="/js/nprogress/nprogress.js"></script>
+        <script src="/js/jquery.isotope.min.js"></script>
+        <script src="/js/imagesloaded.pkgd.min.js"></script>
+        <script src="/js/jquery.fitvids.js"></script>
+        <script src="/js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="/js/jquery.easing.1.3.js"></script>
+        <script src="/js/jquery.validate.min.js"></script>
 
-        <script src="js/main.js"></script>
-        <script src="js/partials-loader.js"></script>
-        <script src="js/code-copy.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/partials-loader.js"></script>
+        <script src="/js/code-copy.js"></script>
         <script>
-            loadPartial('blog-header-partial', 'partials/blog-header.html');
-            loadRecentPostsCards('recent-posts-cards', 'data/posts.json');
+            loadPartial('blog-header-partial', '/partials/blog-header.html');
+            loadRecentPostsCards('recent-posts-cards', '/data/posts.json');
         </script>
 
 </body>

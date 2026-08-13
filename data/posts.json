@@ -1,17 +1,17 @@
 [
   {
     "title": "Visualize the SwiftUI Lifecycle: What Actually Fires and When",
-    "url": "blog-article-swiftui-lifecycle.html",
+    "url": "/blog/swiftui-lifecycle.html",
     "date": "2025-07-02",
-    "image": "images/blog/swiftui-lifecycle/swift-lifecycle-cover.png",
+    "image": "/images/blog/swiftui-lifecycle/swift-lifecycle-cover.png",
     "category": "iOS Development",
     "excerpt": "When does your view actually appear? When does init run? Does onAppear fire before or after task? Stop guessing — use print statements to see the SwiftUI lifecycle in real time."
   },
   {
     "title": "AI-Assisted Swift Development: A Practical Guide",
-    "url": "blog-article-ai-swift.html",
+    "url": "/blog/ai-swift.html",
     "date": "2025-06-24",
-    "image": "images/blog/ai-swift/swift-ai-guide-cover.png",
+    "image": "/images/blog/ai-swift/swift-ai-guide-cover.png",
     "category": "iOS Development",
     "excerpt": "If you have never used an AI coding agent before, this guide will walk you through the essentials: how to work with them efficiently, how to connect them to Xcode, and how to avoid the most common mistakes."
   }

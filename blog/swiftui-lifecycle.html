@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js classic-page-layout " data-audio-wind="audio/wind.wav" data-audio-wind-reverse="audio/wind-reverse.wav" data-audio-tick="audio/tick.mp3">
+<html lang="en" class="no-js classic-page-layout " data-audio-wind="/audio/wind.wav" data-audio-wind-reverse="/audio/wind-reverse.wav" data-audio-tick="/audio/tick.mp3">
 <head>
 
         <meta charset="utf-8" />
@@ -12,26 +12,26 @@
         <title>Visualize the SwiftUI Lifecycle: What Actually Fires and When | Antonio Palomba</title>
 
         <!-- FAV and TOUCH ICONS -->
-        <link rel="shortcut icon" href="images/ico/favicon.ico">
-        <link rel="apple-touch-icon" href="images/ico/apple-touch-icon.png">
+        <link rel="shortcut icon" href="/images/ico/favicon.ico">
+        <link rel="apple-touch-icon" href="/images/ico/apple-touch-icon.png">
 
         <!-- FONTS -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 
         <!-- STYLES -->
-        <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="js/nprogress/nprogress.css">
-        <link rel="stylesheet" type="text/css" href="js/jquery.magnific-popup/magnific-popup.css">
-        <link rel="stylesheet" type="text/css" href="css/fonts/fontello/css/fontello.css">
-        <link rel="stylesheet" type="text/css" href="css/align.css">
-        <link rel="stylesheet" type="text/css" href="css/layout.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/768.css">
+        <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/js/nprogress/nprogress.css">
+        <link rel="stylesheet" type="text/css" href="/js/jquery.magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" type="text/css" href="/css/fonts/fontello/css/fontello.css">
+        <link rel="stylesheet" type="text/css" href="/css/align.css">
+        <link rel="stylesheet" type="text/css" href="/css/layout.css">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/css/768.css">
 
         <!-- INITIAL SCRIPTS -->
-<script src="js/jquery-3.2.1.min.js"></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
 </head>
 
 
@@ -94,7 +94,7 @@
 
                                           <!-- .featured-image -->
                                           <div class="featured-image">
-                                            <img src="images/blog/swiftui-lifecycle/swift-lifecycle-cover.png" alt="SwiftUI app entry point with print statements in Xcode">
+                                            <img src="/images/blog/swiftui-lifecycle/swift-lifecycle-cover.png" alt="SwiftUI app entry point with print statements in Xcode">
                                           </div>
                                           <!-- .featured-image -->
 
@@ -136,7 +136,7 @@
 
                                             <p>The first thing to instrument is the <code>@main</code> struct itself — specifically its <code>body</code> computed property.</p>
 
-                                            <img src="images/blog/swiftui-lifecycle/02.png" alt="Adding a print statement inside var body: some Scene in the @main struct">
+                                            <img src="/images/blog/swiftui-lifecycle/02.png" alt="Adding a print statement inside var body: some Scene in the @main struct">
 
                                             <p>Notice that as soon as you add a <code>print</code> inside a computed property like <code>var body: some Scene</code>, Swift requires you to add an explicit <code>return</code> before the view you are returning. This is because Swift's implicit return only works when the body contains a single expression. Add a second expression — like a <code>print</code> — and the compiler needs you to be explicit.</p>
 
@@ -148,7 +148,7 @@
 
                                             <p>The same rule applies to any <code>View</code>. Add a <code>print</code> to <code>var body: some View</code>, and you need <code>return</code> before your view.</p>
 
-                                            <img src="images/blog/swiftui-lifecycle/03.png" alt="Print inside var body: some View in a SwiftUI ContentView">
+                                            <img src="/images/blog/swiftui-lifecycle/03.png" alt="Print inside var body: some View in a SwiftUI ContentView">
 
                                             <p>This tells you every time SwiftUI re-evaluates a view's body — which happens more often than you might expect. SwiftUI is very efficient at deciding what to actually redraw on screen, but the body computation itself can be triggered frequently. Seeing it in the console makes that concrete.</p>
 
@@ -158,7 +158,7 @@
 
                                             <p>Views in SwiftUI are structs, which means they can be initialized and discarded very quickly. Adding a print to <code>init</code> shows you when and why a view is being created.</p>
 
-                                            <img src="images/blog/swiftui-lifecycle/04.png" alt="Print inside the init of a SwiftUI view showing what triggered it">
+                                            <img src="/images/blog/swiftui-lifecycle/04.png" alt="Print inside the init of a SwiftUI view showing what triggered it">
 
                                             <p>You can pass a label — for example <code>"ContentView init"</code> — so you always know which view is being initialized in the console output. When you have multiple views, this becomes essential for keeping track of what is happening.</p>
 
@@ -170,11 +170,11 @@
 
                                             <p>Modifiers in SwiftUI are views too, which means they go through the same lifecycle. Creating a custom <code>ViewModifier</code> and printing from its <code>body</code> lets you see exactly where it fits in the rendering sequence.</p>
 
-                                            <img src="images/blog/swiftui-lifecycle/05.png" alt="Custom ViewModifier struct with a print in its body method">
+                                            <img src="/images/blog/swiftui-lifecycle/05.png" alt="Custom ViewModifier struct with a print in its body method">
 
                                             <p>Once the modifier is defined, attach it to your view using <code>.modifier()</code>:</p>
 
-                                            <img src="images/blog/swiftui-lifecycle/06.png" alt="Applying the custom ViewModifier to a SwiftUI view">
+                                            <img src="/images/blog/swiftui-lifecycle/06.png" alt="Applying the custom ViewModifier to a SwiftUI view">
 
                                             <p>Now when you run the app, you will see the modifier's print appear in the console alongside the view's own print. Pay attention to the order — it is not always what you might assume.</p>
 
@@ -184,7 +184,7 @@
 
                                             <p><code>task</code> is SwiftUI's built-in way to run async work when a view appears. It runs after the view has been rendered and shown on screen. Adding two <code>task</code> modifiers in a row lets you verify that they run independently and in the order they are declared.</p>
 
-                                            <img src="images/blog/swiftui-lifecycle/07.png" alt="Two .task modifiers on a SwiftUI view with print statements inside each">
+                                            <img src="/images/blog/swiftui-lifecycle/07.png" alt="Two .task modifiers on a SwiftUI view with print statements inside each">
 
                                             <p>One thing to notice: <code>task</code> runs <em>after</em> the view appears. If you are fetching data from a network and updating state, the user will briefly see the empty state first. That is by design, and understanding this timing helps you build better loading states.</p>
 
@@ -194,7 +194,7 @@
 
                                             <p><code>onAppear</code> is the synchronous counterpart to <code>task</code>. It fires when the view becomes visible. Stacking two of them shows you that both run, and helps you understand how it compares to <code>task</code> in the overall sequence.</p>
 
-                                            <img src="images/blog/swiftui-lifecycle/08.png" alt="Two .onAppear modifiers on a SwiftUI view with print statements inside each">
+                                            <img src="/images/blog/swiftui-lifecycle/08.png" alt="Two .onAppear modifiers on a SwiftUI view with print statements inside each">
 
                                             <p>A key question you might already be asking: does <code>onAppear</code> run before or after <code>task</code>? Keep that question in mind — you will see the answer in the final output below.</p>
 
@@ -204,7 +204,7 @@
 
                                             <p>Real apps are not made of a single view. They have hierarchies — a parent view that contains a child view, which may contain more children. Adding a <code>DetailView</code> inside your <code>ContentView</code> lets you observe how the lifecycle of a parent and its children interleave.</p>
 
-                                            <img src="images/blog/swiftui-lifecycle/09.png" alt="DetailView nested inside ContentView in SwiftUI">
+                                            <img src="/images/blog/swiftui-lifecycle/09.png" alt="DetailView nested inside ContentView in SwiftUI">
 
                                             <p>Just like before, add a <code>print</code> to <code>DetailView</code>'s <code>init</code> and <code>body</code>. Now when you run the app, the console will show prints from both views, letting you see the parent-child initialization order.</p>
 
@@ -214,9 +214,9 @@
 
                                             <p>Finally, give the <code>DetailView</code> the same full treatment: a custom modifier, two <code>task</code> closures, and two <code>onAppear</code> closures — all with their own print statements.</p>
 
-                                            <img src="images/blog/swiftui-lifecycle/10.png" alt="DetailView with a custom ViewModifier attached in SwiftUI">
+                                            <img src="/images/blog/swiftui-lifecycle/10.png" alt="DetailView with a custom ViewModifier attached in SwiftUI">
 
-                                            <img src="images/blog/swiftui-lifecycle/11.png" alt="DetailView with task and onAppear modifiers and print statements">
+                                            <img src="/images/blog/swiftui-lifecycle/11.png" alt="DetailView with task and onAppear modifiers and print statements">
 
                                             <p>Now you have a complete two-level hierarchy where every significant lifecycle event is instrumented. Running the app will produce a detailed log of everything that happens from the moment the system launches your app to the moment both views are fully on screen.</p>
 
@@ -226,7 +226,7 @@
 
                                             <p>Here is what the console output looks like when you run the complete setup:</p>
 
-                                            <img src="images/blog/swiftui-lifecycle/12.png" alt="Final Xcode console output showing the full SwiftUI lifecycle event order">
+                                            <img src="/images/blog/swiftui-lifecycle/12.png" alt="Final Xcode console output showing the full SwiftUI lifecycle event order">
 
                                             <p>Reading through this output, a few things stand out:</p>
 
@@ -280,7 +280,7 @@
                                               <div class="section-title center">
                                                   <h2><i>More Articles</i></h2>
                                               </div>
-                                              <div id="recent-posts-cards" class="latest-posts media-grid" data-current="blog-article-swiftui-lifecycle.html"></div>
+                                              <div id="recent-posts-cards" class="latest-posts media-grid" data-current="/blog/swiftui-lifecycle.html"></div>
                                           </div>
                                           <!-- .more-articles -->
 
@@ -326,22 +326,22 @@
 
 
         <!-- SCRIPTS -->
-        <script src="js/fastclick.js"></script>
-        <script src="js/jquery.address.js"></script>
-        <script src="js/nprogress/nprogress.js"></script>
-        <script src="js/jquery.isotope.min.js"></script>
-        <script src="js/imagesloaded.pkgd.min.js"></script>
-        <script src="js/jquery.fitvids.js"></script>
-        <script src="js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/jquery.validate.min.js"></script>
+        <script src="/js/fastclick.js"></script>
+        <script src="/js/jquery.address.js"></script>
+        <script src="/js/nprogress/nprogress.js"></script>
+        <script src="/js/jquery.isotope.min.js"></script>
+        <script src="/js/imagesloaded.pkgd.min.js"></script>
+        <script src="/js/jquery.fitvids.js"></script>
+        <script src="/js/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="/js/jquery.easing.1.3.js"></script>
+        <script src="/js/jquery.validate.min.js"></script>
 
-        <script src="js/main.js"></script>
-        <script src="js/partials-loader.js"></script>
-        <script src="js/code-copy.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/partials-loader.js"></script>
+        <script src="/js/code-copy.js"></script>
         <script>
-            loadPartial('blog-header-partial', 'partials/blog-header.html');
-            loadRecentPostsCards('recent-posts-cards', 'data/posts.json');
+            loadPartial('blog-header-partial', '/partials/blog-header.html');
+            loadRecentPostsCards('recent-posts-cards', '/data/posts.json');
         </script>
 
 </body>
